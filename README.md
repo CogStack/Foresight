@@ -5,4 +5,4 @@ We present a novel deep learning generative model of patients using EHRs that is
 
 Demo at: https://foresight.sites.er.kcl.ac.uk/
 
-More info on arXiv
+Paper: https://arxiv.org/abs/2212.08072
