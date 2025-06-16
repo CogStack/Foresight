@@ -7,16 +7,16 @@ with open("./README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="medgpt",
+    name="foresight",
     version="0.4",
     author="w-is-h",
     author_email="w.kraljevic@gmail.com",
     description="Temporal modeling of patients and diseases",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/w-is-h/medgpt",
-    packages=['medgpt', 'medgpt.datasets', 'medgpt.metrics', 'medgpt.utils',
-              'medgpt.models', 'medgpt.tokenizers'],
+    url="https://github.com/CogStack/foresight",
+    packages=['foresight', 'foresight.datasets', 'foresight.metrics', 'foresight.utils',
+              'foresight.tokenizers'],
     install_requires=[
         'datasets==2.15.0'
         'transformers==4.35.2',
