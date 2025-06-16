@@ -18,9 +18,13 @@ setuptools.setup(
     packages=['foresight', 'foresight.datasets', 'foresight.metrics', 'foresight.utils',
               'foresight.tokenizers'],
     install_requires=[
-        'datasets==2.15.0'
-        'transformers==4.35.2',
-        'flash-attn==2.3.6',
+        'datasets',
+        'dill',
+        'medcat',
+        'numpy',
+        'pandas',
+        'torch',
+        'transformers',
         ],
     classifiers=[
         "Programming Language :: Python :: 3",
