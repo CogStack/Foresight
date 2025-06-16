@@ -55,7 +55,7 @@ class Sight(object):
                 select_tokens.extend(token_type2tokens[type_id])
         else:
             select_tokens = None
-        ps = self._predict(stream, create_position_ids=create_position_ids)
+        ps = self._predict(stream, create_position_ids=create_position_ids, skip_oov=skip_oov)
         preds = np.argsort(-1 * ps)
         candidates = []
         sep_ids = [self.tokenizer.tkn2id[x] for x in self.tokenizer.token_type2tokens['sep']]
