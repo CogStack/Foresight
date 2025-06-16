@@ -95,7 +95,6 @@ class Sight(object):
 
                     if len(candidates) >= n:
                         break
-        print(len(candidates))
         return candidates
 
 
