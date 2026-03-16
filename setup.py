@@ -1,27 +1,34 @@
 import setuptools
-from setuptools.command.install import install
-from setuptools.command.develop import develop
-from setuptools.command.egg_info import egg_info
 
-with open("./README.md", "r") as fh:
+with open("./README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="medgpt",
-    version="0.4",
+    name="foresight",
+    version="0.5",
     author="w-is-h",
     author_email="w.kraljevic@gmail.com",
-    description="Temporal modeling of patients and diseases",
+    description="Deep Generative Modelling of Patient Timelines using Electronic Health Records",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/w-is-h/medgpt",
-    packages=['medgpt', 'medgpt.datasets', 'medgpt.metrics', 'medgpt.utils',
-              'medgpt.models', 'medgpt.tokenizers'],
+    url="https://github.com/CogStack/Foresight",
+    packages=[
+        "foresight",
+        "foresight.datasets",
+        "foresight.metrics",
+        "foresight.utils",
+        "foresight.tokenizers",
+    ],
+    python_requires=">=3.9",
     install_requires=[
-        'datasets==2.15.0'
-        'transformers==4.35.2',
-        'flash-attn==2.3.6',
-        ],
+        "datasets>=2.15",
+        "transformers>=4.35",
+        "torch",
+        "numpy",
+    ],
+    extras_require={
+        "flash-attn": ["flash-attn>=2.3"],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
